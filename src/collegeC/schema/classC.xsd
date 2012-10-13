@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding = "gb2312"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="class">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Cno" minOccurs="1" maxOccurs="1"
+					type="xs:string" />
+				<xs:element name="Cnm" minOccurs="1" maxOccurs="1"
+					type="xs:string" />
+				<xs:element name="Ctm" minOccurs="1" maxOccurs="1"
+					type="xs:string" />
+				<xs:element name="Cpt" minOccurs="1" maxOccurs="1"
+					type="xs:string" />
+				<xs:element name="Tec" maxOccurs="1" type="xs:string" />
+				<xs:element name="Pla" maxOccurs="1" type="xs:string" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Classes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="class" maxOccurs="20" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

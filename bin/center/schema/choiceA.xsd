@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding = "gb2312"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="classId" type="xs:string" />
+	<xs:element name="studentId" type="xs:string" />
+	<xs:element name="score" type="xs:string" />
+	<xs:element name="choice">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="classId" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="studentId" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="score" maxOccurs="1" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Choices">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="choice" maxOccurs="20" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

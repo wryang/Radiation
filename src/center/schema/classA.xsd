@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding = "gb2312"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="id" type="xs:string" />
+	<xs:element name="className" type="xs:string" />
+	<xs:element name="point" type="xs:string" />
+	<xs:element name="tea" type="xs:string" />
+	<xs:element name="place" type="xs:string" />
+	<xs:element name="class">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="id" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="className" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="point" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="tea" maxOccurs="1" />
+				<xs:element ref="place" maxOccurs="1" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Classes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="class" maxOccurs="20" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

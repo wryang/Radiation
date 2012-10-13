@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding = "gb2312"?>
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+<xs:element name="studentId" type="xs:string"/>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="gender" type="xs:string"/>
+<xs:element name="institution" type = "xs:string"/>
+<xs:element name="student">
+	<xs:complexType>
+		<xs:all>
+			<xs:element ref="studentId" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="gender" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="institution" minOccurs="1" maxOccurs="1"/>
+		</xs:all>
+	</xs:complexType>
+</xs:element>
+<xs:element name="Students">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="student" maxOccurs="20" minOccurs="0"/>
+		</xs:sequence>	
+	</xs:complexType>
+</xs:element>
+</xs:schema>

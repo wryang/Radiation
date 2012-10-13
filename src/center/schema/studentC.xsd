@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding = "gb2312"?>
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+<xs:element name="Sno" type="xs:string"/>
+<xs:element name="Snm" type="xs:string"/>
+<xs:element name="Sex" type="xs:string"/>
+<xs:element name="Sde" type = "xs:string"/>
+<xs:element name="student">
+	<xs:complexType>
+		<xs:all>
+			<xs:element ref="Sno" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="Snm" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="Sex" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="Sde" minOccurs="1" maxOccurs="1"/>
+		</xs:all>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Students">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="student" maxOccurs="20" minOccurs="0"/>
+		</xs:sequence>	
+	</xs:complexType>
+</xs:element>
+</xs:schema>

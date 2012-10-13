@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding = "gb2312"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Cno" type="xs:string" />
+	<xs:element name="Cnm" type="xs:string" />
+	<xs:element name="Ctm" type="xs:string" />
+	<xs:element name="Cpt" type="xs:string" />
+	<xs:element name="Tec" type="xs:string" />
+	<xs:element name="Pla" type="xs:string" />
+	<xs:element name="class">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Cno" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="Cnm" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="Ctm" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="Cpt" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="Tec" maxOccurs="1" />
+				<xs:element ref="Pla" maxOccurs="1" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Classes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="class" maxOccurs="20" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

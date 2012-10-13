@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding = "gb2312"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ID" type="xs:string" />
+	<xs:element name="courseName" type="xs:string" />
+	<xs:element name="time" type="xs:string" />
+	<xs:element name="point" type="xs:string" />
+	<xs:element name="teacher" type="xs:string" />
+	<xs:element name="place" type="xs:string" />
+	<xs:element name="class">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="ID" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="courseName" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="time" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="point" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="teacher" maxOccurs="1" />
+				<xs:element ref="place" maxOccurs="1" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Classes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="class" maxOccurs="20" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
